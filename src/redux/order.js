@@ -14,11 +14,11 @@ export const ordersApi = createApi({
       return headers;
     },
   }),
-  tagTypes: ["Order"],
+  tagTypes: ["Order", "Orders"],
   endpoints: (builder) => ({
     getAll: builder.query({
       query: ({ page, limit }) => `/order?page=${page}&limit=${limit}`,
-      providesTags: ["Order"],
+      providesTags: ["Orders"],
     }),
     getById: builder.query({
       query: (orderId) => `/order/${orderId}`,
@@ -29,7 +29,7 @@ export const ordersApi = createApi({
         url: `/order/${orderId}`,
         method: "DELETE",
       }),
-      invalidatesTags: ["Order"],
+      invalidatesTags: ["Order", "Orders"],
     }),
     create: builder.mutation({
       query: (data) => ({
@@ -37,7 +37,7 @@ export const ordersApi = createApi({
         method: "POST",
         body: data,
       }),
-      invalidatesTags: ["Hero"],
+      invalidatesTags: ["Orders"],
     }),
     update: builder.mutation({
       query: ({ orderId, data }) => ({
@@ -45,7 +45,7 @@ export const ordersApi = createApi({
         method: "PATCH",
         body: data,
       }),
-      invalidatesTags: ["Hero"],
+      invalidatesTags: ["Orders", "Order"],
     }),
   }),
 });
