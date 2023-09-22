@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import {
-    Card,
-    Title,
-    Description,
-    CheckBoxLabel,
-    Wraper,
-} from './order-card.styled';
-import { CustomCheckbox } from '../../../components/checkbox/checkbox.component';
+  Card,
+  Title,
+  Description,
+  CheckBoxLabel,
+  Wraper,
+} from "./order-card.styled";
+import { CustomCheckbox } from "../../../components/checkbox/checkbox.component";
 
-export const OrderCard =({ card }) => (
+export const OrderCard = ({ card }) => (
   <Card>
     <Title>{card.title}</Title>
     <Description>{card.description}</Description>
@@ -16,10 +16,6 @@ export const OrderCard =({ card }) => (
       <CheckBoxLabel>
         Done
         <CustomCheckbox isTrue={card.isDone} />
-      </CheckBoxLabel>
-      <CheckBoxLabel>
-        Private
-        <CustomCheckbox isTrue={card.isPrivate} />
       </CheckBoxLabel>
     </Wraper>
   </Card>
