@@ -33,7 +33,8 @@ export const OrderTabele = ({
       return news;
     });
   };
-  const countitems = pagin.limits * (pagin.page + 1) < count;
+  const countitems = pagin.limit * (pagin.page + 1) < count;
+  console.log();
 
   return (
     <TableContainer>
