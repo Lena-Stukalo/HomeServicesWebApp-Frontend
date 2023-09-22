@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import * as theme from '../../../../theme';
+import styled from "styled-components";
+import * as theme from "../../../../theme";
 
 export const ModalWrapper = styled.div`
   position: relative;

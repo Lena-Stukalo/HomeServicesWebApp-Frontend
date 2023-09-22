@@ -31,10 +31,11 @@ export const Content = styled.div`
   padding: 10px 10px 20px;
   background-color: #ffffff;
   border-radius: 20px;
-  overflow-y: auto;
+  padding: 60px 10px;
+  overflow-y: scroll;
   @media (min-width: 481px) {
-    padding: 20px 60px;
     max-width: 500px;
+    padding: 60px 60px;
   }
 `;
 
