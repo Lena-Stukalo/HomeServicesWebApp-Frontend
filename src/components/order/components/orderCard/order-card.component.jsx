@@ -15,7 +15,7 @@ export const OrderCard = ({ card }) => (
     <Wraper>
       <CheckBoxLabel>
         Done
-        <CustomCheckbox isTrue={card.isDone} />
+        <CustomCheckbox isTrue={card.done} />
       </CheckBoxLabel>
     </Wraper>
   </Card>
