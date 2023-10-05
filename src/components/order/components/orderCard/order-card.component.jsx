@@ -11,7 +11,7 @@ import { CustomCheckbox } from "../../../components/checkbox/checkbox.component"
 export const OrderCard = ({ card }) => (
   <Card>
     <Title>{card.title}</Title>
-    <Description>{card.description}</Description>
+    <Description>{card.order}</Description>
     <Wraper>
       <CheckBoxLabel>
         Done
