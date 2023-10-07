@@ -59,12 +59,7 @@ const currentUser = createAsyncThunk("auth/current", async (_, thunkAPI) => {
   try {
     const { data } = await axios.get("/auth/current");
     return data;
-  } catch (error) {
-    const { response } = error;
-
-    Notify.failure(`${response.status}: ${response.statusText}`);
-    throw error;
-  }
+  } catch (error) {}
 });
 const resetPass = createAsyncThunk(
   "/auth/resetpassword",
